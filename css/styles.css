@@ -99,7 +99,7 @@ section {
     padding: 5px 10px;
     cursor: pointer;
     font-size: 14px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-out;
 }
 
 .copy-btn:hover {
@@ -114,6 +114,16 @@ section {
 
 
 /* Services */
+#servicios {
+    background-color: #a4dfe0;
+    height: 50rem;
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -125,6 +135,12 @@ section {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #921dec;
+    
+    transition: background-color 0.3s ease-out;
+}
+.service-item:hover {
+   background-color: #aa58e9; 
 }
 
 /* Guía de Estilos */
