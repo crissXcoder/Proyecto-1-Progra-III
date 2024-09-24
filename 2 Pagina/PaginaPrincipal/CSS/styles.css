@@ -1,0 +1,339 @@
+/* Estilos base */
+body {
+    font-family: 'Open Sans', sans-serif;   
+    background-color: #FFF5E1; /* Color crema de fondo */
+    color: #4A2C2A; /* Color chocolate para el texto */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #4A2C2A;
+}
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+
+/* Navbar */
+.navbar {
+    background-color: #FFD1DC; /* Color rosa pastel */
+    padding: 3.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.navbar li {
+    margin: 0 1rem;
+}
+.navbar a {
+    text-decoration: none;
+    color: #4A2C2A;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #FFFFFF;
+}
+
+#inicio {
+    border-radius: 20px;
+    background-image: url(https://proingra.com/wp-content/uploads/2021/10/21-OCT-BRAHMAN_3-1024x576.jpg); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Para que la imagen cubra todo el contenedor */
+    background-position: center; /* Centrar la imagen */
+    height: 100vh; /* Ajusta la altura según lo que necesites */
+    color: #4A2C2A; /* Cambia el color del texto para mayor legibilidad */
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+    justify-content: center; /* Centrar horizontalmente el contenido */
+    
+    display: grid;
+}
+
+
+/* Header */
+header {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #C5E0B4; /* Color menta suave */
+    margin-bottom: 0; /* Eliminamos el margen inferior */
+}
+
+/* Main content */
+main {
+    max-width: 100%; /* Hacemos que ocupe todo el ancho */
+    margin: 0 auto;
+    padding: 0; /* Eliminamos el padding */
+}
+
+/* Sections */
+section {
+    text-align: center;
+    padding: 4rem 2rem;
+    /* Eliminamos el borde y la sombra */
+}
+
+/* Colores de fondo para cada sección */
+#sobre-nosotros { background-color: #FFF0F5; } /* Lavanda muy claro */
+#servicios { background-color: #F0FFF0; } /* Menta muy claro */
+#galeria { background-color: #FFF5E1; } /* Crema */
+#testimonios { background-color: #F0F8FF; } /* Azul muy claro */
+#contacto { background-color: #FFF0F5; } /* Lavanda muy claro */
+#guia-estilos { background-color: #F0FFF0; } /* Menta muy claro */
+
+/* Contenedor para limitar el ancho del contenido dentro de las secciones */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-primary {
+    background-color: #FFD1DC; /* Color rosa pastel */
+    color: #4A2C2A;
+}
+.btn-primary:hover {
+    background-color: #FFC0CB; /* Rosa más oscuro al hover */
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.service-item {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Image gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+#testimonios {
+    background-color: #F0F8FF; /* Mantenemos el color de fondo azul muy claro */
+    padding: 4rem 2rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-out;
+}
+
+.testimonial:hover {
+    transform: perspective(1000px) rotateY(5deg);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonial-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.testimonial-title {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+}
+
+.testimonial-text {
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Estilos específicos para cada testimonio */
+.testimonial:nth-child(1) {
+    grid-column: span 2;
+    background-color: #FFD1DC; /* Rosa pastel */
+    color: #4A2C2A;
+}
+
+.testimonial:nth-child(2) {
+    grid-row: span 2;
+}
+
+.testimonial:nth-child(5) {
+    grid-column: span 2;
+    background-color: #C5E0B4; /* Verde menta suave */
+    color: #4A2C2A;
+}
+
+
+/* Contact form */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255, 209, 220, 0.3); /* Rosa pastel semi-transparente */
+    padding: 2rem;
+    border-radius: 8px;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4A2C2A;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #FFD1DC; /* Borde rosa pastel */
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4A2C2A;
+}
+
+/* Footer */
+footer {
+    background-color: #4A2C2A; /* Color chocolate */
+    color: #FFFFFF;
+    padding: 2rem;
+    text-align: center;
+}
+.social-links a {
+    color: #FFD1DC; /* Enlaces en rosa pastel */
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #FFFFFF;
+}
+
+/* Estilos para el formulario de pedido en la guía de estilos */
+#pedido-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#pedido-form label {
+    font-weight: bold;
+    color: #4A2C2A;
+}
+
+#pedido-form input,
+#pedido-form select,
+#pedido-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #FFD1DC;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+}
+
+#pedido-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#pedido-form button {
+    align-self: flex-start;
+    background-color: #FFD1DC;
+    color: #4A2C2A;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#pedido-form button:hover {
+    background-color: #FFC0CB;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .services,
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial:nth-child(1),
+    .testimonial:nth-child(2),
+    .testimonial:nth-child(5) {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
