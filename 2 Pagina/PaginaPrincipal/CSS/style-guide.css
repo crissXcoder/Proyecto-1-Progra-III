@@ -1,9 +1,9 @@
 /* Estilos base */
 body {
-    font-family: 'Open Sans', sans-serif;   
-    background-color: #FFF5E1;
-    color: #4A2C2A;
     line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #FFF5E1, #FFD1DC, #C5E0B4);
+    color: #4A2C2A;
     margin: 0;
     padding: 0;
 }

@@ -1,9 +1,18 @@
 /* Estilos base */
 body {
-    font-family: 'Open Sans', sans-serif;   
-    background-color: #FFF5E1; /* Color crema de fondo */
-    color: #4A2C2A; /* Color chocolate para el texto */
     line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, 
+        #F0F8FF 0%, 
+        #FFD1DC 20%, 
+        #E6F3FF 40%, 
+        #FFF0F5 60%, 
+        #F0F8FF 80%, 
+        #FFD1DC 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh;;
+    color: #4A2C2A;
     margin: 0;
     padding: 0;
 }
@@ -107,12 +116,6 @@ section {
 }
 
 /* Colores de fondo para cada sección */
-#sobre-nosotros { background-color: #FFF0F5; } /* Lavanda muy claro */
-#servicios { background-color: #F0FFF0; } /* Menta muy claro */
-#galeria { background-color: #FFF5E1; } /* Crema */
-#testimonios { background-color: #F0F8FF; } /* Azul muy claro */
-#contacto { background-color: #FFF0F5; } /* Lavanda muy claro */
-#guia-estilos { background-color: #F0FFF0; } /* Menta muy claro */
 
 /* Contenedor para limitar el ancho del contenido dentro de las secciones */
 .container {
@@ -139,42 +142,146 @@ section {
 }
 
 /* Services */
-.services {
+.services-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.services-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #4A2C2A;
+    margin-bottom: 2rem;
+}
+
+.services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
 }
-.service-item {
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
-    padding: 1.5rem;
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
     transition: transform 0.3s ease;
 }
-.service-item:hover {
+
+.service-card:hover {
     transform: translateY(-5px);
 }
 
-/* Image gallery */
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-.gallery-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-.gallery-image:hover {
-    transform: scale(1.05);
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #4A2C2A;
 }
 
+.service-name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #4A2C2A;
+}
+
+.service-description {
+    font-size: 0.9rem;
+    color: #6B4F4F;
+    margin-bottom: 1rem;
+}
+
+.learn-more-button {
+    background-color: #C5E0B4;
+    color: #4A2C2A;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.learn-more-button:hover {
+    background-color: #A8D8A8;
+}
+
+/** Galería de imágenes ***/
+.catalog-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.services h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #4A2C2A;
+}
+.category {
+    background-color: #FFD1DC;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    display: inline-block;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.product-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+.product-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+.product-info {
+    padding: 1rem;
+    text-align: center;
+}
+.product-name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+.product-price {
+    font-weight: bold;
+    color: #4A2C2A;
+    margin: 0.5rem 0;
+}
+.product-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.order-button {
+    background-color: #C5E0B4;
+    color: #4A2C2A;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+.order-button:hover {
+    background-color: #A8D8A8;
+}
+
+
+/* Estilos para testimonios */
 #testimonios {
-    background-color: #F0F8FF; /* Mantenemos el color de fondo azul muy claro */
     padding: 4rem 2rem;
 }
 
@@ -243,27 +350,37 @@ section {
 
 .testimonial:nth-child(5) {
     grid-column: span 2;
-    background-color: #C5E0B4; /* Verde menta suave */
+    background-color: rgba(141, 196, 245, 0.7); /* Verde menta suave */
     color: #4A2C2A;
 }
 
-
-/* Contact form */
-.contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: rgba(255, 209, 220, 0.3); /* Rosa pastel semi-transparente */
-    padding: 2rem;
-    border-radius: 8px;
+/* Estilos de los formularios */
+.forms-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
 }
+
+.form-wrapper {
+    flex: 1 1 400px;
+    max-width: 500px;
+    background-color: rgba(255, 209, 220, 0.3); /* Rosa pastel semi-transparente */
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
 .form-group {
     margin-bottom: 1rem;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     color: #4A2C2A;
 }
+
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -281,57 +398,7 @@ section {
     border-color: #4A2C2A;
 }
 
-/* Footer */
-footer {
-    background-color: #4A2C2A; /* Color chocolate */
-    color: #FFFFFF;
-    padding: 2rem;
-    text-align: center;
-}
-.social-links a {
-    color: #FFD1DC; /* Enlaces en rosa pastel */
-    margin: 0 0.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-.social-links a:hover {
-    color: #FFFFFF;
-}
-
-/* Estilos para el formulario de pedido en la guía de estilos */
-#pedido-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#pedido-form label {
-    font-weight: bold;
-    color: #4A2C2A;
-}
-
-#pedido-form input,
-#pedido-form select,
-#pedido-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #FFD1DC;
-    border-radius: 4px;
-    font-family: 'Open Sans', sans-serif;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
-}
-
-#pedido-form textarea {
-    height: 100px;
-    resize: vertical;
-}
-
-#pedido-form button {
+.submit-btn {
     align-self: flex-start;
     background-color: #FFD1DC;
     color: #4A2C2A;
@@ -341,9 +408,29 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-#pedido-form button:hover {
+.submit-btn:hover {
     background-color: #FFC0CB;
+}
+/* Footer */
+footer {
+    background-color: #4A2C2A; /* Color chocolate */
+    color: #FFFFFF;
+    padding: 2rem;
+    text-align: center;
+}
+#footer-logo
+{
+    height: 10rem;
+    width: 10rem;
+}
+.social-links a {
+    color: #FFD1DC; /* Enlaces en rosa pastel */
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: #FFFFFF;
 }
 
 /* Responsive design */
