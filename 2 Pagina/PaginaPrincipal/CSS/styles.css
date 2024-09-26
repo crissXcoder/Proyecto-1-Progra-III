@@ -1,3 +1,4 @@
+
 /* Estilos base */
 body {
     line-height: 1.6;
@@ -78,28 +79,46 @@ h4 { font-size: 20px; }
     width: auto; /* Mantén la proporción del logo */
 }
 
-#inicio {
-    border-radius: 20px;
-    background-image: url(https://proingra.com/wp-content/uploads/2021/10/21-OCT-BRAHMAN_3-1024x576.jpg); /* Reemplaza con la ruta de tu imagen */
-    background-size: cover; /* Para que la imagen cubra todo el contenedor */
-    background-position: center; /* Centrar la imagen */
-    height: 100vh; /* Ajusta la altura según lo que necesites */
-    color: #4A2C2A; /* Cambia el color del texto para mayor legibilidad */
+
+.header {
+    height: 100vh;
     display: flex;
-    align-items: center; /* Centrar verticalmente el contenido */
-    justify-content: center; /* Centrar horizontalmente el contenido */
-    
-    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #F0F8FF, #FFD1DC, #E6F3FF, #FFF0F5, #F0F8FF, #FFD1DC);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
 }
 
-
-/* Header */
-header {
+.content {
     text-align: center;
-    padding: 3rem 0;
-    background-color: #C5E0B4; /* Color menta suave */
-    margin-bottom: 0; /* Eliminamos el margen inferior */
+    z-index: 10;
+    padding: 2rem;
+    border-radius: 10px;
 }
+
+#header h1 {
+    font-size: 3rem;
+    color: #4A2C2A;
+    margin-bottom: 1rem;
+}
+
+#header p {
+    font-size: 1.2rem;
+    color: #4A2C2A;
+    margin-bottom: 2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: pulse 4s infinite ease-in-out;
+}
+
 
 /* Main content */
 main {
@@ -411,6 +430,72 @@ section {
 .submit-btn:hover {
     background-color: #FFC0CB;
 }
+
+/* Estilos para la alerta personalizada */
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+.alert-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.alert-success .alert-icon {
+    background-color: #C5E0B4;
+    color: #4A2C2A;
+}
+
+.alert-error .alert-icon {
+    background-color: #FFD1DC;
+    color: #4A2C2A;
+}
+
+.alert-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #4A2C2A;
+    margin-bottom: 10px;
+}
+
+.alert-message {
+    font-size: 16px;
+    color: #6B4F4F;
+    margin-bottom: 20px;
+}
+
+.alert-button {
+    background-color: #FFD1DC;
+    color: #4A2C2A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.alert-button:hover {
+    background-color: #FFC0CB;
+}
+
+
 /* Footer */
 footer {
     background-color: #4A2C2A; /* Color chocolate */
@@ -450,4 +535,16 @@ footer {
         grid-column: auto;
         grid-row: auto;
     }
+}
+
+/** Animaciones **/
+@keyframes pulse {
+    0%, 100% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
