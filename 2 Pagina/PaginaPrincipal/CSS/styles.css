@@ -548,3 +548,17 @@ footer {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+}
+.footer a:hover {
+    color: #ddd;
+}
+
+.link-privacidad {
+color: white;
+}
