@@ -9,6 +9,34 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+// Función para manejar el desplazamiento suave
+function smoothScrollToSection(event) {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = targetPosition - navbarHeight - (window.innerHeight / 2) + (targetElement.offsetHeight / 2);
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Agregar el evento a todos los enlaces de navegación
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', smoothScrollToSection);
+    });
+});
+
+/*
 function showAlert(type, message) {
     const alert = document.getElementById('customAlert');
     const icon = alert.querySelector('.alert-icon');
@@ -68,7 +96,7 @@ forms.forEach(form => {
         });
     });
 });
-
+*/
 function createCircles() {
     const header = document.getElementById('header4');
     const circleCount = 15;
@@ -89,6 +117,13 @@ function createCircles() {
 
         header.appendChild(circle);
     }
+    // Detener la animación después de 10 segundos
+    setTimeout(() => {
+        const circles = document.querySelectorAll('.circle');
+        circles.forEach(circle => {
+            circle.style.animationPlayState = 'paused';
+        });
+    }, 10000);
 }
 
 createCircles();

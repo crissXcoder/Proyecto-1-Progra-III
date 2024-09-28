@@ -117,6 +117,7 @@ h4 { font-size: 20px; }
     border-radius: 50%;
     opacity: 0.5;
     animation: pulse 4s infinite ease-in-out;
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
 }
 
 
@@ -134,30 +135,10 @@ section {
     /* Eliminamos el borde y la sombra */
 }
 
-/* Colores de fondo para cada sección */
-
 /* Contenedor para limitar el ancho del contenido dentro de las secciones */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.btn-primary {
-    background-color: #FFD1DC; /* Color rosa pastel */
-    color: #4A2C2A;
-}
-.btn-primary:hover {
-    background-color: #FFC0CB; /* Rosa más oscuro al hover */
 }
 
 /* Services */
@@ -233,26 +214,25 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    text-align: center; /* Centra todo el contenido del contenedor */
 }
-.services h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    text-align: center;
-    color: #4A2C2A;
+.catalog-section h2 {
+    text-align: center; /* Centra el texto del título */
+    margin: 0 auto;
 }
 .category {
     background-color: #FFD1DC;
     border-radius: 25px;
     padding: 1rem 2rem;
     display: inline-block;
-    margin: 1rem 0;
+    margin: 2rem 0 1rem 0; 
     font-weight: bold;
 }
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 2.5rem;
 }
 .product-card {
     background-color: rgba(255, 255, 255, 0.8);
@@ -261,6 +241,11 @@ section {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
+    
+    transition: transform 0.3s ease-out;
+}
+.product-card:hover {
+    transform: translateY(-5px);
 }
 .product-image {
     width: 100%;
@@ -369,7 +354,7 @@ section {
 
 .testimonial:nth-child(5) {
     grid-column: span 2;
-    background-color: rgba(141, 196, 245, 0.7); /* Verde menta suave */
+    background-color: rgba(#FFD1DC); /* Rosa pastel transparente */
     color: #4A2C2A;
 }
 
@@ -396,6 +381,7 @@ section {
 
 .form-group label {
     display: block;
+    text-align: left;
     margin-bottom: 0.5rem;
     color: #4A2C2A;
 }
@@ -430,8 +416,7 @@ section {
 .submit-btn:hover {
     background-color: #FFC0CB;
 }
-
-/* Estilos para la alerta personalizada */
+/*
 .custom-alert {
     position: fixed;
     top: 50%;
@@ -494,7 +479,7 @@ section {
 .alert-button:hover {
     background-color: #FFC0CB;
 }
-
+*/
 
 /* Footer */
 footer {
@@ -516,6 +501,21 @@ footer {
 }
 .social-links a:hover {
     color: #FFFFFF;
+}
+
+/** social link**/
+.footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+}
+.footer a:hover {
+    color: #ddd;
+}
+
+.link-privacidad {
+color: white;
 }
 
 /* Responsive design */
@@ -547,19 +547,4 @@ footer {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
-
-/** social link**/
-.footer a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 24px;
-}
-.footer a:hover {
-    color: #ddd;
-}
-
-.link-privacidad {
-color: white;
 }
