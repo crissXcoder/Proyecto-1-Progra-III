@@ -288,7 +288,6 @@ section {
 #testimonios {
     padding: 4rem 2rem;
 }
-
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -296,7 +295,6 @@ section {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .testimonial {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
@@ -306,17 +304,14 @@ section {
     flex-direction: column;
     transition: transform 0.2s ease-out;
 }
-
 .testimonial:hover {
     transform: perspective(1000px) rotateY(5deg);
 }
-
 .testimonial-header {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
-
 .testimonial-image {
     width: 50px;
     height: 50px;
@@ -324,34 +319,28 @@ section {
     margin-right: 15px;
     object-fit: cover;
 }
-
 .testimonial-name {
     font-weight: bold;
     margin: 0;
 }
-
 .testimonial-title {
     font-size: 0.9em;
     color: #666;
     margin: 0;
 }
-
 .testimonial-text {
     font-size: 0.95em;
     line-height: 1.5;
 }
-
 /* Estilos específicos para cada testimonio */
 .testimonial:nth-child(1) {
     grid-column: span 2;
     background-color: #FFD1DC; /* Rosa pastel */
     color: #4A2C2A;
 }
-
 .testimonial:nth-child(2) {
     grid-row: span 2;
 }
-
 .testimonial:nth-child(5) {
     grid-column: span 2;
     background-color: rgba(#FFD1DC); /* Rosa pastel transparente */
@@ -365,7 +354,6 @@ section {
     justify-content: space-around;
     gap: 2rem;
 }
-
 .form-wrapper {
     flex: 1 1 400px;
     max-width: 500px;
@@ -374,18 +362,18 @@ section {
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
 .form-group {
     margin-bottom: 1rem;
 }
-
 .form-group label {
     display: block;
     text-align: left;
     margin-bottom: 0.5rem;
     color: #4A2C2A;
 }
-
+.form-icon {
+    text-align: left;
+}
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -402,7 +390,6 @@ section {
     outline: none;
     border-color: #4A2C2A;
 }
-
 .submit-btn {
     align-self: flex-start;
     background-color: #FFD1DC;
@@ -416,6 +403,8 @@ section {
 .submit-btn:hover {
     background-color: #FFC0CB;
 }
+
+
 /*
 .custom-alert {
     position: fixed;
